@@ -5,7 +5,7 @@ document.write(data)
 
 let learn = "Content";
 
-setTimeout(function(){
+setTimeout(function () {
     console.log(learn)
 }, 1000);
 
@@ -27,7 +27,7 @@ workTime();
 
 console.log('Sleeping Time');
 
-function printToken(msg , alertToken) {
+function printToken(msg, alertToken) {
     alertToken(msg)
 }
 
@@ -35,7 +35,7 @@ function alertToken(msg) {
     alert(msg);
 }
 
-printToken("Hello Crypto" , alertToken);
+printToken("Hello Crypto", alertToken);
 
 
 function printToken(msg, alertToken) {
@@ -70,3 +70,13 @@ function alertToken(msg) {
 }
 
 printToken("Bitcoin", alertToken);
+
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log("Promise Run!")
+        resolve()
+    }, 1000)
+})
+promise.then(function(){
+    console.log("Promise Is Resolve")
+})
