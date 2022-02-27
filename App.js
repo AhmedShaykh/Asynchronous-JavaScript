@@ -1,15 +1,15 @@
-// console.log('Start Learning JS !');
+console.log('Start Learning JS !');
 
-// let data = "Learning Asynchronous JavaScript + ES6 (Vanilla Javascript)";
-// document.write(data)
+let data = "Learning Asynchronous JavaScript + ES6 (Vanilla Javascript)";
+document.write(data)
 
-// let learn = "Content";
+let learn = "Content";
 
-// setTimeout(function(){
-//     console.log(learn)
-// }, 1000);
+setTimeout(function(){
+    console.log(learn)
+}, 1000);
 
-// console.log('End Learning JS !');
+console.log('End Learning JS !');
 
 console.log('Office Time');
 
@@ -27,15 +27,15 @@ workTime();
 
 console.log('Sleeping Time');
 
-// function printToken(msg , alertToken) {
-//     alertToken(msg)
-// }
+function printToken(msg , alertToken) {
+    alertToken(msg)
+}
 
-// function alertToken(msg) {
-//     alert(msg);
-// }
+function alertToken(msg) {
+    alert(msg);
+}
 
-// printToken("Hello Crypto" , alertToken);
+printToken("Hello Crypto" , alertToken);
 
 
 function printToken(msg, alertToken) {
