@@ -1,8 +1,5 @@
 console.log('Start Learning JS !');
 
-let data = "Learning Asynchronous JavaScript + ES6 (Vanilla Javascript)";
-document.write(data)
-
 let learn = "Content";
 
 setTimeout(function () {
@@ -103,17 +100,83 @@ let promiseData = new Promise(function (resolve, reject) {
     }, 1000)
 })
 
-promiseData.then(function(){
+promiseData.then(function () {
     console.log("Promise Resolve")
     return 2
 })
-.then(function(val){
-    console.log(val)
-    return val + 4
-})
-.then(function(val2){
-    console.log(val2)
-})
-.catch(function(){
-    console.log("Error")
-})
+    .then(function (val) {
+        console.log(val)
+        return val + 4
+    })
+    .then(function (val2) {
+        console.log(val2)
+    })
+    .catch(function () {
+        console.log("Error")
+    }
+)
+
+console.log("Start")
+
+function callBack1() {
+    setTimeout(function(){
+        console.log("Callback 1")
+    } , 300)
+}
+
+function callBack2() {
+    setTimeout(function(){
+        console.log("Callback 2")
+    } , 200)
+}
+function callBack3() {
+    setTimeout(function(){
+        console.log("Callback 3")
+    } , 100)
+}
+
+function func() {
+    callBack1()
+    console.log("Function 1")
+}
+
+func()
+
+function func2() {
+    callBack2()
+    console.log("Function 2")
+}
+
+func2()
+
+function func3() {
+    callBack3()
+    console.log("Function 3")
+}
+
+func3()
+
+console.log("End")
+
+function apiFetch() {
+    let promiseExample = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log("Promise")
+            // resolve("Data")
+            reject("Error Define")
+        }, 1000)
+    })
+    return promiseExample
+}
+
+async function asyncJS() {
+    try {
+        let api = await apiFetch();
+        console.log(api, "Successful")
+    }
+    catch (error) {
+        console.log(error , "Error")
+    }
+}
+
+asyncJS()
