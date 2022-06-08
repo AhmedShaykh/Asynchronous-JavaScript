@@ -52,17 +52,4 @@ promise.then(function (value){
     console.log("Error = ",error);
 });
 
-
-
-/*
-prepareFood(function(value){
-    console.log("Food is Ready callback = ",value);
-    prepareFrenchToast(function (value){
-        console.log("French Toast is Ready callback = ",value);
-        prepareCoffee(function (value){
-            console.log("Coffee is Ready callback = ",value);
-        });
-    });
-});
-*/
 console.log("After Prepare food dinner is ready");
