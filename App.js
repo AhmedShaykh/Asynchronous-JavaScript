@@ -1,18 +1,18 @@
-// console.log('Start Learning');
+console.log('Start Learning');
 
-// let learn = 'Finish Learning';
+let learn = 'Finish Learning';
 
-// setTimeout(function () {
-//     console.log(learn)
-// }, 1000);
+setTimeout(function () {
+    console.log(learn)
+}, 1000);
 
-// console.log('Break Time');
+console.log('Break Time');
 
 console.log('Office Time');
 
 function backHome() {
     setTimeout(function () {
-        console.log("Working Stop");
+        console.log("Sleeping Time");
     }, 3000)
 }
 
@@ -23,50 +23,53 @@ function workTime() {
 
 workTime();
 
-console.log('Sleeping Time');
+console.log('Working Stop');
 
-// function printToken(msg, alertToken) {
-//     alertToken(msg)
-// }
+function tokenAPI(msg, alertTokenAPI) {
+    alertTokenAPI(msg)
+}
 
-// function alertToken(msg) {
-//     alert(msg);
-// }
+function alertTokenAPI(msg) {
+    console.log(msg);
+}
 
-// printToken("Hello Crypto", alertToken);
+tokenAPI("Hi! Crypto", alertTokenAPI);
 
-// function printToken(msg, alertToken) {
-//     if (msg === 'Bitcoin') {
-//         btc(alertToken)
-//     }
-//     else if (msg === 'Ethereum') {
-//         eth(alertToken)
-//     }
-//     else {
-//         bnb(alertToken)
-//     }
-// }
+function printToken(msg, alertToken) {
+    if (msg === 'Bitcoin') {
+        btc(alertToken)
+    }
+    else if (msg === 'Ethereum') {
+        eth(alertToken)
+    }
+    else if (msg === 'Binance') {
+        bnb(alertToken)
+    }
+    else {
+        alert('No Data')
+    }
+}
 
-// function btc(alertToken) {
-//     alert("Buy & Sell Bitcoin");
-//     alertToken("Hello Bitcoin")
-// }
+function btc(alertToken) {
+    alertToken("Hello Bitcoin")
+    alert("Buy & Sell Bitcoin");
+}
 
-// function eth(alertToken) {
-//     alert("Buy & Sell Ethereum");
-//     alertToken("Hello Ethereum")
-// }
+function eth(alertToken) {
+    alertToken("Hello Ethereum")
+    alert("Buy & Sell Ethereum");
+}
 
-// function bnb(alertToken) {
-//     alert("Buy & Sell Binance Coin");
-//     alertToken("Hello Binance Coin")
-// }
+function bnb(alertToken) {
+    alertToken("Hello Binance Coin")
+    alert("Buy & Sell Binance Coin");
+}
 
-// function alertToken(msg) {
-//     alert(msg);
-// }
+function alertToken(msg) {
+    alert(msg);
+}
 
-// printToken("Bitcoin", alertToken);
+printToken(prompt("Enter Crypto","BTC , ETH Or BNB"), alertToken);
 
 // let promise = new Promise(function (resolve, reject) {
 //     setTimeout(function () {
