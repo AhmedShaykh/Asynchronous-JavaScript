@@ -74,7 +74,7 @@ printToken(prompt("Enter Crypto","BTC , ETH Or BNB"), alertToken);
 let promise = new Promise(function (resolve, reject) {
     setTimeout(function() {
         resolve()
-    }, 1500)
+    }, 1000)
     console.log("Promise Is Running!")
 })
 
