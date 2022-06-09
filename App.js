@@ -46,7 +46,7 @@ function printToken(msg, alertToken) {
         bnb(alertToken)
     }
     else {
-        alert('No Data')
+        alert('No Data Here')
     }
 }
 
