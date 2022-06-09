@@ -71,45 +71,50 @@ function alertToken(msg) {
 
 printToken(prompt("Enter Crypto","BTC , ETH Or BNB"), alertToken);
 
-// let promise = new Promise(function (resolve, reject) {
-//     setTimeout(function () {
-//         console.log("Promise Run!")
-//         resolve()
-//     }, 1000)
-// })
-// promise.then(function () {
-//     console.log("Promise Is Solve")
-// })
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function() {
+        resolve()
+    }, 1500)
+    console.log("Promise Run!")
+})
 
-// new Promise(function (resolve, reject) {
-//     setTimeout(() => {
-//         resolve('Completed');
-//     }, 3000);
-// })
-//     .finally(() => console.log('Done'))
-//     .then(result => console.log(result));
+promise.then(function () {
+    console.log("Promise Is Resolve")
+})
 
-// function delay(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }
+new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        resolve('Completed');
+    }, 2000);
+})
 
-// delay(2000).then(() => console.log('Running After 2 seconds'));
+.finally(() => console.log('Done'))
+.then(result => console.log(result));
 
-// async function getData() {
-//     let promise04 = new Promise(function (resolve, reject) {
-//         fetch('https://jsonplaceholder.typicode.com/todos/1')
-//             .then(function (response) {
-//                 return response.json()
-//             })
-//             .then(function (result) {
-//                 resolve(result)
-//             })
-//             .catch(function (error) {
-//                 reject(error)
-//             })
-//     })
-//     let data = await promise04
-//     console.log(data)
-// };
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-// getData();
+delay(2000)
+.then(() => console.log('Running After 2 seconds'));
+
+async function getData() {
+    let promise04 = new Promise(function (resolve, reject) {
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (result) {
+                resolve(result)
+            })
+            .catch(function (error) {
+                reject(error)
+            })
+        }
+    )
+
+    let data = await promise04
+    console.log(data)
+};
+
+getData();
