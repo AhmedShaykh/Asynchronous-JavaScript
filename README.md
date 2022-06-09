@@ -1,1 +1,1 @@
-# Learning Asynchronous JavaScript + ES6 (Vanilla Javascript) !
+# Learning Asynchronous JavaScript + ES6 (Advanced JavaScript)!
