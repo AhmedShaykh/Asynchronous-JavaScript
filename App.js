@@ -105,7 +105,7 @@ async function getData() {
                 return response.json()
             })
             .then(function (result) {
-                resolve(result , "Result")
+                resolve(result)
             })
             .catch(function (error) {
                 reject(error)
