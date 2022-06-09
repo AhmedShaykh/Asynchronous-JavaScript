@@ -75,7 +75,7 @@ let promise = new Promise(function (resolve, reject) {
     setTimeout(function() {
         resolve()
     }, 1500)
-    console.log("Promise Run!")
+    console.log("Promise Is Running!")
 })
 
 promise.then(function () {
